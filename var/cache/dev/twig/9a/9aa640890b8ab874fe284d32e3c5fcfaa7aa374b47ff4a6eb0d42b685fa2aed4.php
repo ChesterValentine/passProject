@@ -131,6 +131,7 @@ class __TwigTemplate_7b088fafd723058e137e507b4cd041cd646ba643211b1d918e20b89eadc
 .sf-toolbar-block > a:hover {
     display: block;
     text-decoration: none;
+    color: inherit;
 }
 
 .sf-toolbar-block span {
@@ -238,41 +239,41 @@ div.sf-toolbar .sf-toolbar-block a:hover {
 
 .sf-toolbar-block .sf-toolbar-status-green {
     background-color: ";
-        // line 212
-        echo twig_get_attribute($this->env, $this->source, (isset($context["colors"]) || array_key_exists("colors", $context) ? $context["colors"] : (function () { throw new Twig_Error_Runtime('Variable "colors" does not exist.', 212, $this->source); })()), "success", []);
+        // line 213
+        echo twig_get_attribute($this->env, $this->source, (isset($context["colors"]) || array_key_exists("colors", $context) ? $context["colors"] : (function () { throw new Twig_Error_Runtime('Variable "colors" does not exist.', 213, $this->source); })()), "success", []);
         echo ";
 }
 .sf-toolbar-block .sf-toolbar-status-red {
     background-color: ";
-        // line 215
-        echo twig_get_attribute($this->env, $this->source, (isset($context["colors"]) || array_key_exists("colors", $context) ? $context["colors"] : (function () { throw new Twig_Error_Runtime('Variable "colors" does not exist.', 215, $this->source); })()), "error", []);
+        // line 216
+        echo twig_get_attribute($this->env, $this->source, (isset($context["colors"]) || array_key_exists("colors", $context) ? $context["colors"] : (function () { throw new Twig_Error_Runtime('Variable "colors" does not exist.', 216, $this->source); })()), "error", []);
         echo ";
 }
 .sf-toolbar-block .sf-toolbar-status-yellow {
     background-color: ";
-        // line 218
-        echo twig_get_attribute($this->env, $this->source, (isset($context["colors"]) || array_key_exists("colors", $context) ? $context["colors"] : (function () { throw new Twig_Error_Runtime('Variable "colors" does not exist.', 218, $this->source); })()), "warning", []);
+        // line 219
+        echo twig_get_attribute($this->env, $this->source, (isset($context["colors"]) || array_key_exists("colors", $context) ? $context["colors"] : (function () { throw new Twig_Error_Runtime('Variable "colors" does not exist.', 219, $this->source); })()), "warning", []);
         echo ";
 }
 
 .sf-toolbar-block.sf-toolbar-status-green {
     background-color: ";
-        // line 222
-        echo twig_get_attribute($this->env, $this->source, (isset($context["colors"]) || array_key_exists("colors", $context) ? $context["colors"] : (function () { throw new Twig_Error_Runtime('Variable "colors" does not exist.', 222, $this->source); })()), "success", []);
+        // line 223
+        echo twig_get_attribute($this->env, $this->source, (isset($context["colors"]) || array_key_exists("colors", $context) ? $context["colors"] : (function () { throw new Twig_Error_Runtime('Variable "colors" does not exist.', 223, $this->source); })()), "success", []);
         echo ";
     color: #FFF;
 }
 .sf-toolbar-block.sf-toolbar-status-red {
     background-color: ";
-        // line 226
-        echo twig_get_attribute($this->env, $this->source, (isset($context["colors"]) || array_key_exists("colors", $context) ? $context["colors"] : (function () { throw new Twig_Error_Runtime('Variable "colors" does not exist.', 226, $this->source); })()), "error", []);
+        // line 227
+        echo twig_get_attribute($this->env, $this->source, (isset($context["colors"]) || array_key_exists("colors", $context) ? $context["colors"] : (function () { throw new Twig_Error_Runtime('Variable "colors" does not exist.', 227, $this->source); })()), "error", []);
         echo ";
     color: #FFF;
 }
 .sf-toolbar-block.sf-toolbar-status-yellow {
     background-color: ";
-        // line 230
-        echo twig_get_attribute($this->env, $this->source, (isset($context["colors"]) || array_key_exists("colors", $context) ? $context["colors"] : (function () { throw new Twig_Error_Runtime('Variable "colors" does not exist.', 230, $this->source); })()), "warning", []);
+        // line 231
+        echo twig_get_attribute($this->env, $this->source, (isset($context["colors"]) || array_key_exists("colors", $context) ? $context["colors"] : (function () { throw new Twig_Error_Runtime('Variable "colors" does not exist.', 231, $this->source); })()), "warning", []);
         echo ";
     color: #FFF;
 }
@@ -560,7 +561,7 @@ div.sf-toolbar .sf-toolbar-block a:hover {
 @media (min-width: 1024px) {
     .sf-toolbar-block .sf-toolbar-info-piece-additional,
     .sf-toolbar-block .sf-toolbar-info-piece-additional-detail {
-        display: inline-block;
+        display: inline;
     }
 
     .sf-toolbar-block .sf-toolbar-info-piece-additional:empty,
@@ -626,7 +627,7 @@ div.sf-toolbar .sf-toolbar-block a:hover {
 
     public function getDebugInfo()
     {
-        return array (  275 => 230,  268 => 226,  261 => 222,  254 => 218,  248 => 215,  242 => 212,  31 => 3,  29 => 2,);
+        return array (  276 => 231,  269 => 227,  262 => 223,  255 => 219,  249 => 216,  243 => 213,  31 => 3,  29 => 2,);
     }
 
     public function getSourceContext()
@@ -736,6 +737,7 @@ div.sf-toolbar .sf-toolbar-block a:hover {
 .sf-toolbar-block > a:hover {
     display: block;
     text-decoration: none;
+    color: inherit;
 }
 
 .sf-toolbar-block span {
@@ -1147,7 +1149,7 @@ div.sf-toolbar .sf-toolbar-block a:hover {
 @media (min-width: 1024px) {
     .sf-toolbar-block .sf-toolbar-info-piece-additional,
     .sf-toolbar-block .sf-toolbar-info-piece-additional-detail {
-        display: inline-block;
+        display: inline;
     }
 
     .sf-toolbar-block .sf-toolbar-info-piece-additional:empty,
@@ -1192,6 +1194,6 @@ div.sf-toolbar .sf-toolbar-block a:hover {
         display: none;
     }
 }
-", "@WebProfiler/Profiler/toolbar.css.twig", "/home/chesterval/Programmation/hackathon/pass-project/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/toolbar.css.twig");
+", "@WebProfiler/Profiler/toolbar.css.twig", "/home/thiery/hackathon/passProject/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/toolbar.css.twig");
     }
 }

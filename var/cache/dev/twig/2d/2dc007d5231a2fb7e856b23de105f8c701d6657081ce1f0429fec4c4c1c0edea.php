@@ -162,6 +162,6 @@ class __TwigTemplate_29a39bd2348cf38ac4c673b8686a9e2b4ddfbddecdb4832993c7a89e5b4
         </tr>
     </tbody>
 </table>
-", "@Twig/Exception/traces_text.html.twig", "/home/chesterval/Programmation/hackathon/pass-project/vendor/symfony/twig-bundle/Resources/views/Exception/traces_text.html.twig");
+", "@Twig/Exception/traces_text.html.twig", "/home/thiery/hackathon/passProject/vendor/symfony/twig-bundle/Resources/views/Exception/traces_text.html.twig");
     }
 }

@@ -396,6 +396,6 @@ class __TwigTemplate_3d99cb674b7fb41520440dedc6ce65cf7e3a894163db1fd46eea05f2111
 {% block body %}
     {% include '@Twig/Exception/exception.html.twig' %}
 {% endblock %}
-", "@Twig/Exception/exception_full.html.twig", "/home/chesterval/Programmation/hackathon/pass-project/vendor/symfony/twig-bundle/Resources/views/Exception/exception_full.html.twig");
+", "@Twig/Exception/exception_full.html.twig", "/home/thiery/hackathon/passProject/vendor/symfony/twig-bundle/Resources/views/Exception/exception_full.html.twig");
     }
 }

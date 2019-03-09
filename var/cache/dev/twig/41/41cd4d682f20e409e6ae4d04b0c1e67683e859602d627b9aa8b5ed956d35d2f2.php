@@ -143,29 +143,29 @@ class __TwigTemplate_2e392b05651245bb8344c74403d360cb5aaf12d278358850032b37c99da
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "menu"));
 
         // line 33
-        echo "<span class=\"label";
+        echo "    <span class=\"label";
         echo ((twig_get_attribute($this->env, $this->source, (isset($context["collector"]) || array_key_exists("collector", $context) ? $context["collector"] : (function () { throw new Twig_Error_Runtime('Variable "collector" does not exist.', 33, $this->source); })()), "exceptionsCount", [])) ? (" label-status-error") : (""));
         echo ((twig_test_empty(twig_get_attribute($this->env, $this->source, (isset($context["collector"]) || array_key_exists("collector", $context) ? $context["collector"] : (function () { throw new Twig_Error_Runtime('Variable "collector" does not exist.', 33, $this->source); })()), "messages", []))) ? (" disabled") : (""));
         echo "\">
-    <span class=\"icon\">";
+        <span class=\"icon\">";
         // line 34
         echo twig_include($this->env, $context, "@WebProfiler/Icon/messenger.svg");
         echo "</span>
-    <strong>Messages</strong>
-    ";
+        <strong>Messages</strong>
+        ";
         // line 36
         if ((twig_get_attribute($this->env, $this->source, (isset($context["collector"]) || array_key_exists("collector", $context) ? $context["collector"] : (function () { throw new Twig_Error_Runtime('Variable "collector" does not exist.', 36, $this->source); })()), "exceptionsCount", []) > 0)) {
             // line 37
-            echo "        <span class=\"count\">
-            <span>";
+            echo "            <span class=\"count\">
+                <span>";
             // line 38
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["collector"]) || array_key_exists("collector", $context) ? $context["collector"] : (function () { throw new Twig_Error_Runtime('Variable "collector" does not exist.', 38, $this->source); })()), "exceptionsCount", []), "html", null, true);
             echo "</span>
-        </span>
-    ";
+            </span>
+        ";
         }
         // line 41
-        echo "</span>
+        echo "    </span>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -239,71 +239,71 @@ class __TwigTemplate_2e392b05651245bb8344c74403d360cb5aaf12d278358850032b37c99da
     ";
         } else {
             // line 74
-            echo "
-    <div class=\"sf-tabs message-bus\">
-        <div class=\"tab\">
-            ";
+            echo "        <div class=\"sf-tabs message-bus\">
+            <div class=\"tab\">
+                ";
+            // line 76
+            $context["messages"] = twig_get_attribute($this->env, $this->source, (isset($context["collector"]) || array_key_exists("collector", $context) ? $context["collector"] : (function () { throw new Twig_Error_Runtime('Variable "collector" does not exist.', 76, $this->source); })()), "messages", []);
             // line 77
-            $context["messages"] = twig_get_attribute($this->env, $this->source, (isset($context["collector"]) || array_key_exists("collector", $context) ? $context["collector"] : (function () { throw new Twig_Error_Runtime('Variable "collector" does not exist.', 77, $this->source); })()), "messages", []);
+            echo "                ";
+            $context["exceptionsCount"] = twig_get_attribute($this->env, $this->source, (isset($context["collector"]) || array_key_exists("collector", $context) ? $context["collector"] : (function () { throw new Twig_Error_Runtime('Variable "collector" does not exist.', 77, $this->source); })()), "exceptionsCount", []);
             // line 78
-            echo "            ";
-            $context["exceptionsCount"] = twig_get_attribute($this->env, $this->source, (isset($context["collector"]) || array_key_exists("collector", $context) ? $context["collector"] : (function () { throw new Twig_Error_Runtime('Variable "collector" does not exist.', 78, $this->source); })()), "exceptionsCount", []);
-            // line 79
-            echo "            <h3 class=\"tab-title\">All<span class=\"badge ";
-            echo (((isset($context["exceptionsCount"]) || array_key_exists("exceptionsCount", $context) ? $context["exceptionsCount"] : (function () { throw new Twig_Error_Runtime('Variable "exceptionsCount" does not exist.', 79, $this->source); })())) ? (((((isset($context["exceptionsCount"]) || array_key_exists("exceptionsCount", $context) ? $context["exceptionsCount"] : (function () { throw new Twig_Error_Runtime('Variable "exceptionsCount" does not exist.', 79, $this->source); })()) == twig_length_filter($this->env, (isset($context["messages"]) || array_key_exists("messages", $context) ? $context["messages"] : (function () { throw new Twig_Error_Runtime('Variable "messages" does not exist.', 79, $this->source); })())))) ? ("status-error") : ("status-some-errors"))) : (""));
+            echo "                <h3 class=\"tab-title\">All<span class=\"badge ";
+            echo (((isset($context["exceptionsCount"]) || array_key_exists("exceptionsCount", $context) ? $context["exceptionsCount"] : (function () { throw new Twig_Error_Runtime('Variable "exceptionsCount" does not exist.', 78, $this->source); })())) ? (((((isset($context["exceptionsCount"]) || array_key_exists("exceptionsCount", $context) ? $context["exceptionsCount"] : (function () { throw new Twig_Error_Runtime('Variable "exceptionsCount" does not exist.', 78, $this->source); })()) == twig_length_filter($this->env, (isset($context["messages"]) || array_key_exists("messages", $context) ? $context["messages"] : (function () { throw new Twig_Error_Runtime('Variable "messages" does not exist.', 78, $this->source); })())))) ? ("status-error") : ("status-some-errors"))) : (""));
             echo "\">";
-            echo twig_escape_filter($this->env, twig_length_filter($this->env, (isset($context["messages"]) || array_key_exists("messages", $context) ? $context["messages"] : (function () { throw new Twig_Error_Runtime('Variable "messages" does not exist.', 79, $this->source); })())), "html", null, true);
+            echo twig_escape_filter($this->env, twig_length_filter($this->env, (isset($context["messages"]) || array_key_exists("messages", $context) ? $context["messages"] : (function () { throw new Twig_Error_Runtime('Variable "messages" does not exist.', 78, $this->source); })())), "html", null, true);
             echo "</span></h3>
 
-            <div class=\"tab-content\">
-                <p class=\"text-muted\">Ordered list of dispatched messages across all your buses</p>
-                ";
-            // line 83
-            echo $context["helper"]->macro_render_bus_messages((isset($context["messages"]) || array_key_exists("messages", $context) ? $context["messages"] : (function () { throw new Twig_Error_Runtime('Variable "messages" does not exist.', 83, $this->source); })()), true);
+                <div class=\"tab-content\">
+                    <p class=\"text-muted\">Ordered list of dispatched messages across all your buses</p>
+                    ";
+            // line 82
+            echo $context["helper"]->macro_render_bus_messages((isset($context["messages"]) || array_key_exists("messages", $context) ? $context["messages"] : (function () { throw new Twig_Error_Runtime('Variable "messages" does not exist.', 82, $this->source); })()), true);
             echo "
+                </div>
             </div>
-        </div>
 
-        ";
-            // line 87
-            $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["collector"]) || array_key_exists("collector", $context) ? $context["collector"] : (function () { throw new Twig_Error_Runtime('Variable "collector" does not exist.', 87, $this->source); })()), "buses", []));
-            foreach ($context['_seq'] as $context["_key"] => $context["bus"]) {
-                // line 88
-                echo "        <div class=\"tab message-bus\">
             ";
+            // line 86
+            $context['_parent'] = $context;
+            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["collector"]) || array_key_exists("collector", $context) ? $context["collector"] : (function () { throw new Twig_Error_Runtime('Variable "collector" does not exist.', 86, $this->source); })()), "buses", []));
+            foreach ($context['_seq'] as $context["_key"] => $context["bus"]) {
+                // line 87
+                echo "                <div class=\"tab message-bus\">
+                    ";
+                // line 88
+                $context["messages"] = twig_get_attribute($this->env, $this->source, (isset($context["collector"]) || array_key_exists("collector", $context) ? $context["collector"] : (function () { throw new Twig_Error_Runtime('Variable "collector" does not exist.', 88, $this->source); })()), "messages", [0 => $context["bus"]], "method");
                 // line 89
-                $context["messages"] = twig_get_attribute($this->env, $this->source, (isset($context["collector"]) || array_key_exists("collector", $context) ? $context["collector"] : (function () { throw new Twig_Error_Runtime('Variable "collector" does not exist.', 89, $this->source); })()), "messages", [0 => $context["bus"]], "method");
+                echo "                    ";
+                $context["exceptionsCount"] = twig_get_attribute($this->env, $this->source, (isset($context["collector"]) || array_key_exists("collector", $context) ? $context["collector"] : (function () { throw new Twig_Error_Runtime('Variable "collector" does not exist.', 89, $this->source); })()), "exceptionsCount", [0 => $context["bus"]], "method");
                 // line 90
-                echo "            ";
-                $context["exceptionsCount"] = twig_get_attribute($this->env, $this->source, (isset($context["collector"]) || array_key_exists("collector", $context) ? $context["collector"] : (function () { throw new Twig_Error_Runtime('Variable "collector" does not exist.', 90, $this->source); })()), "exceptionsCount", [0 => $context["bus"]], "method");
-                // line 91
-                echo "            <h3 class=\"tab-title\">";
+                echo "                    <h3 class=\"tab-title\">";
                 echo twig_escape_filter($this->env, $context["bus"], "html", null, true);
                 echo "<span class=\"badge ";
-                echo (((isset($context["exceptionsCount"]) || array_key_exists("exceptionsCount", $context) ? $context["exceptionsCount"] : (function () { throw new Twig_Error_Runtime('Variable "exceptionsCount" does not exist.', 91, $this->source); })())) ? (((((isset($context["exceptionsCount"]) || array_key_exists("exceptionsCount", $context) ? $context["exceptionsCount"] : (function () { throw new Twig_Error_Runtime('Variable "exceptionsCount" does not exist.', 91, $this->source); })()) == twig_length_filter($this->env, (isset($context["messages"]) || array_key_exists("messages", $context) ? $context["messages"] : (function () { throw new Twig_Error_Runtime('Variable "messages" does not exist.', 91, $this->source); })())))) ? ("status-error") : ("status-some-errors"))) : (""));
+                echo (((isset($context["exceptionsCount"]) || array_key_exists("exceptionsCount", $context) ? $context["exceptionsCount"] : (function () { throw new Twig_Error_Runtime('Variable "exceptionsCount" does not exist.', 90, $this->source); })())) ? (((((isset($context["exceptionsCount"]) || array_key_exists("exceptionsCount", $context) ? $context["exceptionsCount"] : (function () { throw new Twig_Error_Runtime('Variable "exceptionsCount" does not exist.', 90, $this->source); })()) == twig_length_filter($this->env, (isset($context["messages"]) || array_key_exists("messages", $context) ? $context["messages"] : (function () { throw new Twig_Error_Runtime('Variable "messages" does not exist.', 90, $this->source); })())))) ? ("status-error") : ("status-some-errors"))) : (""));
                 echo "\">";
-                echo twig_escape_filter($this->env, twig_length_filter($this->env, (isset($context["messages"]) || array_key_exists("messages", $context) ? $context["messages"] : (function () { throw new Twig_Error_Runtime('Variable "messages" does not exist.', 91, $this->source); })())), "html", null, true);
+                echo twig_escape_filter($this->env, twig_length_filter($this->env, (isset($context["messages"]) || array_key_exists("messages", $context) ? $context["messages"] : (function () { throw new Twig_Error_Runtime('Variable "messages" does not exist.', 90, $this->source); })())), "html", null, true);
                 echo "</span></h3>
 
-            <div class=\"tab-content\">
-                <p class=\"text-muted\">Ordered list of messages dispatched on the <code>";
-                // line 94
+                    <div class=\"tab-content\">
+                        <p class=\"text-muted\">Ordered list of messages dispatched on the <code>";
+                // line 93
                 echo twig_escape_filter($this->env, $context["bus"], "html", null, true);
                 echo "</code> bus</p>
-                ";
-                // line 95
-                echo $context["helper"]->macro_render_bus_messages((isset($context["messages"]) || array_key_exists("messages", $context) ? $context["messages"] : (function () { throw new Twig_Error_Runtime('Variable "messages" does not exist.', 95, $this->source); })()));
+                        ";
+                // line 94
+                echo $context["helper"]->macro_render_bus_messages((isset($context["messages"]) || array_key_exists("messages", $context) ? $context["messages"] : (function () { throw new Twig_Error_Runtime('Variable "messages" does not exist.', 94, $this->source); })()));
                 echo "
-            </div>
-        </div>
-        ";
+                    </div>
+                </div>
+            ";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['bus'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 99
-            echo "    ";
+            // line 98
+            echo "        </div>
+    ";
         }
         // line 100
         echo "
@@ -359,52 +359,52 @@ class __TwigTemplate_2e392b05651245bb8344c74403d360cb5aaf12d278358850032b37c99da
                 // line 106
                 echo "    <table class=\"message-item\">
         <thead>
-        <tr>
-            <th colspan=\"2\" class=\"sf-toggle\"
-                data-toggle-selector=\"#message-item-";
+            <tr>
+                <th colspan=\"2\" class=\"sf-toggle\"
+                    data-toggle-selector=\"#message-item-";
                 // line 110
                 echo twig_escape_filter($this->env, (isset($context["discr"]) || array_key_exists("discr", $context) ? $context["discr"] : (function () { throw new Twig_Error_Runtime('Variable "discr" does not exist.', 110, $this->source); })()), "html", null, true);
                 echo "-";
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["loop"], "index0", []), "html", null, true);
                 echo "-details\"
-                data-toggle-initial=\"";
+                    data-toggle-initial=\"";
                 // line 111
                 echo ((twig_get_attribute($this->env, $this->source, $context["loop"], "first", [])) ? ("display") : (""));
                 echo "\"
-            >
-                <span class=\"dump-inline\">";
+                >
+                    <span class=\"dump-inline\">";
                 // line 113
                 echo $this->extensions['Symfony\Bundle\WebProfilerBundle\Twig\WebProfilerExtension']->dumpData($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["dispatchCall"], "message", []), "type", []));
                 echo "</span>
-                ";
+                    ";
                 // line 114
                 if ((isset($context["showBus"]) || array_key_exists("showBus", $context) ? $context["showBus"] : (function () { throw new Twig_Error_Runtime('Variable "showBus" does not exist.', 114, $this->source); })())) {
                     // line 115
-                    echo "                    <span class=\"label\">";
+                    echo "                        <span class=\"label\">";
                     echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["dispatchCall"], "bus", []), "html", null, true);
                     echo "</span>
-                ";
+                    ";
                 }
                 // line 117
-                echo "                ";
+                echo "                    ";
                 if (twig_get_attribute($this->env, $this->source, $context["dispatchCall"], "exception", [], "any", true, true)) {
                     // line 118
-                    echo "                    <span class=\"label status-error\">exception</span>
-                ";
+                    echo "                        <span class=\"label status-error\">exception</span>
+                    ";
                 }
                 // line 120
-                echo "                <a class=\"toggle-button\">
-                    <span class=\"icon icon-close\">";
+                echo "                    <a class=\"toggle-button\">
+                        <span class=\"icon icon-close\">";
                 // line 121
                 echo twig_include($this->env, $context, "@Twig/images/icon-minus-square.svg");
                 echo "</span>
-                    <span class=\"icon icon-open\">";
+                        <span class=\"icon icon-open\">";
                 // line 122
                 echo twig_include($this->env, $context, "@Twig/images/icon-plus-square.svg");
                 echo "</span>
-                </a>
-            </th>
-        </tr>
+                    </a>
+                </th>
+            </tr>
         </thead>
         <tbody id=\"message-item-";
                 // line 127
@@ -435,7 +435,7 @@ class __TwigTemplate_2e392b05651245bb8344c74403d360cb5aaf12d278358850032b37c99da
                         echo "\">";
                         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["caller"]) || array_key_exists("caller", $context) ? $context["caller"] : (function () { throw new Twig_Error_Runtime('Variable "caller" does not exist.', 135, $this->source); })()), "name", []), "html", null, true);
                         echo "</a>
-                                ";
+                            ";
                     } else {
                         // line 137
                         echo "                                <abbr title=\"";
@@ -483,13 +483,13 @@ class __TwigTemplate_2e392b05651245bb8344c74403d360cb5aaf12d278358850032b37c99da
                 // line 152
                 if ((isset($context["showBus"]) || array_key_exists("showBus", $context) ? $context["showBus"] : (function () { throw new Twig_Error_Runtime('Variable "showBus" does not exist.', 152, $this->source); })())) {
                     // line 153
-                    echo "            <tr>
-                <td class=\"text-bold\">Bus</td>
-                <td>";
+                    echo "                <tr>
+                    <td class=\"text-bold\">Bus</td>
+                    <td>";
                     // line 155
                     echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["dispatchCall"], "bus", []), "html", null, true);
                     echo "</td>
-            </tr>
+                </tr>
             ";
                 }
                 // line 158
@@ -531,15 +531,15 @@ class __TwigTemplate_2e392b05651245bb8344c74403d360cb5aaf12d278358850032b37c99da
                 // line 172
                 if (twig_get_attribute($this->env, $this->source, $context["dispatchCall"], "exception", [], "any", true, true)) {
                     // line 173
-                    echo "            <tr>
-                <td class=\"text-bold\">Exception</td>
-                <td>
-                    ";
+                    echo "                <tr>
+                    <td class=\"text-bold\">Exception</td>
+                    <td>
+                        ";
                     // line 176
                     echo $this->extensions['Symfony\Bundle\WebProfilerBundle\Twig\WebProfilerExtension']->dumpData($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["dispatchCall"], "exception", []), "value", []), 1);
                     echo "
-                </td>
-            </tr>
+                    </td>
+                </tr>
             ";
                 }
                 // line 180
@@ -583,7 +583,7 @@ class __TwigTemplate_2e392b05651245bb8344c74403d360cb5aaf12d278358850032b37c99da
 
     public function getDebugInfo()
     {
-        return array (  546 => 180,  539 => 176,  534 => 173,  532 => 172,  528 => 170,  521 => 168,  513 => 166,  508 => 165,  500 => 160,  496 => 158,  490 => 155,  486 => 153,  484 => 152,  476 => 147,  469 => 145,  458 => 142,  452 => 140,  449 => 139,  441 => 137,  431 => 135,  428 => 134,  425 => 133,  422 => 132,  420 => 131,  411 => 127,  403 => 122,  399 => 121,  396 => 120,  392 => 118,  389 => 117,  383 => 115,  381 => 114,  377 => 113,  372 => 111,  366 => 110,  360 => 106,  342 => 105,  339 => 104,  320 => 103,  309 => 100,  306 => 99,  296 => 95,  292 => 94,  281 => 91,  278 => 90,  276 => 89,  273 => 88,  269 => 87,  262 => 83,  252 => 79,  249 => 78,  247 => 77,  242 => 74,  236 => 70,  234 => 69,  229 => 66,  226 => 65,  217 => 64,  188 => 45,  179 => 44,  168 => 41,  162 => 38,  159 => 37,  157 => 36,  152 => 34,  146 => 33,  137 => 32,  124 => 28,  121 => 27,  118 => 26,  108 => 22,  103 => 20,  99 => 19,  94 => 17,  91 => 16,  88 => 15,  83 => 14,  81 => 13,  78 => 12,  73 => 10,  68 => 9,  65 => 8,  62 => 7,  59 => 6,  50 => 5,  40 => 1,  38 => 3,  15 => 1,);
+        return array (  546 => 180,  539 => 176,  534 => 173,  532 => 172,  528 => 170,  521 => 168,  513 => 166,  508 => 165,  500 => 160,  496 => 158,  490 => 155,  486 => 153,  484 => 152,  476 => 147,  469 => 145,  458 => 142,  452 => 140,  449 => 139,  441 => 137,  431 => 135,  428 => 134,  425 => 133,  422 => 132,  420 => 131,  411 => 127,  403 => 122,  399 => 121,  396 => 120,  392 => 118,  389 => 117,  383 => 115,  381 => 114,  377 => 113,  372 => 111,  366 => 110,  360 => 106,  342 => 105,  339 => 104,  320 => 103,  309 => 100,  305 => 98,  295 => 94,  291 => 93,  280 => 90,  277 => 89,  275 => 88,  272 => 87,  268 => 86,  261 => 82,  251 => 78,  248 => 77,  246 => 76,  242 => 74,  236 => 70,  234 => 69,  229 => 66,  226 => 65,  217 => 64,  188 => 45,  179 => 44,  168 => 41,  162 => 38,  159 => 37,  157 => 36,  152 => 34,  146 => 33,  137 => 32,  124 => 28,  121 => 27,  118 => 26,  108 => 22,  103 => 20,  99 => 19,  94 => 17,  91 => 16,  88 => 15,  83 => 14,  81 => 13,  78 => 12,  73 => 10,  68 => 9,  65 => 8,  62 => 7,  59 => 6,  50 => 5,  40 => 1,  38 => 3,  15 => 1,);
     }
 
     public function getSourceContext()
@@ -620,15 +620,15 @@ class __TwigTemplate_2e392b05651245bb8344c74403d360cb5aaf12d278358850032b37c99da
 {% endblock %}
 
 {% block menu %}
-<span class=\"label{{ collector.exceptionsCount ? ' label-status-error' }}{{ collector.messages is empty ? ' disabled' }}\">
-    <span class=\"icon\">{{ include('@WebProfiler/Icon/messenger.svg') }}</span>
-    <strong>Messages</strong>
-    {% if collector.exceptionsCount > 0 %}
-        <span class=\"count\">
-            <span>{{ collector.exceptionsCount }}</span>
-        </span>
-    {% endif %}
-</span>
+    <span class=\"label{{ collector.exceptionsCount ? ' label-status-error' }}{{ collector.messages is empty ? ' disabled' }}\">
+        <span class=\"icon\">{{ include('@WebProfiler/Icon/messenger.svg') }}</span>
+        <strong>Messages</strong>
+        {% if collector.exceptionsCount > 0 %}
+            <span class=\"count\">
+                <span>{{ collector.exceptionsCount }}</span>
+            </span>
+        {% endif %}
+    </span>
 {% endblock %}
 
 {% block head %}
@@ -661,31 +661,31 @@ class __TwigTemplate_2e392b05651245bb8344c74403d360cb5aaf12d278358850032b37c99da
             <p>No messages have been collected.</p>
         </div>
     {% else %}
+        <div class=\"sf-tabs message-bus\">
+            <div class=\"tab\">
+                {% set messages = collector.messages %}
+                {% set exceptionsCount = collector.exceptionsCount %}
+                <h3 class=\"tab-title\">All<span class=\"badge {{ exceptionsCount ? exceptionsCount == messages|length ? 'status-error' : 'status-some-errors' }}\">{{ messages|length }}</span></h3>
 
-    <div class=\"sf-tabs message-bus\">
-        <div class=\"tab\">
-            {% set messages = collector.messages %}
-            {% set exceptionsCount = collector.exceptionsCount %}
-            <h3 class=\"tab-title\">All<span class=\"badge {{ exceptionsCount ? exceptionsCount == messages|length ? 'status-error' : 'status-some-errors' }}\">{{ messages|length }}</span></h3>
-
-            <div class=\"tab-content\">
-                <p class=\"text-muted\">Ordered list of dispatched messages across all your buses</p>
-                {{ helper.render_bus_messages(messages, true) }}
+                <div class=\"tab-content\">
+                    <p class=\"text-muted\">Ordered list of dispatched messages across all your buses</p>
+                    {{ helper.render_bus_messages(messages, true) }}
+                </div>
             </div>
-        </div>
 
-        {% for bus in collector.buses %}
-        <div class=\"tab message-bus\">
-            {% set messages = collector.messages(bus) %}
-            {% set exceptionsCount = collector.exceptionsCount(bus) %}
-            <h3 class=\"tab-title\">{{ bus }}<span class=\"badge {{ exceptionsCount ? exceptionsCount == messages|length ? 'status-error' : 'status-some-errors' }}\">{{ messages|length }}</span></h3>
+            {% for bus in collector.buses %}
+                <div class=\"tab message-bus\">
+                    {% set messages = collector.messages(bus) %}
+                    {% set exceptionsCount = collector.exceptionsCount(bus) %}
+                    <h3 class=\"tab-title\">{{ bus }}<span class=\"badge {{ exceptionsCount ? exceptionsCount == messages|length ? 'status-error' : 'status-some-errors' }}\">{{ messages|length }}</span></h3>
 
-            <div class=\"tab-content\">
-                <p class=\"text-muted\">Ordered list of messages dispatched on the <code>{{ bus }}</code> bus</p>
-                {{ helper.render_bus_messages(messages) }}
-            </div>
+                    <div class=\"tab-content\">
+                        <p class=\"text-muted\">Ordered list of messages dispatched on the <code>{{ bus }}</code> bus</p>
+                        {{ helper.render_bus_messages(messages) }}
+                    </div>
+                </div>
+            {% endfor %}
         </div>
-        {% endfor %}
     {% endif %}
 
 {% endblock %}
@@ -695,24 +695,24 @@ class __TwigTemplate_2e392b05651245bb8344c74403d360cb5aaf12d278358850032b37c99da
     {% for dispatchCall in messages %}
     <table class=\"message-item\">
         <thead>
-        <tr>
-            <th colspan=\"2\" class=\"sf-toggle\"
-                data-toggle-selector=\"#message-item-{{ discr }}-{{ loop.index0 }}-details\"
-                data-toggle-initial=\"{{ loop.first ? 'display' }}\"
-            >
-                <span class=\"dump-inline\">{{ profiler_dump(dispatchCall.message.type) }}</span>
-                {% if showBus %}
-                    <span class=\"label\">{{ dispatchCall.bus }}</span>
-                {% endif %}
-                {% if dispatchCall.exception is defined %}
-                    <span class=\"label status-error\">exception</span>
-                {% endif %}
-                <a class=\"toggle-button\">
-                    <span class=\"icon icon-close\">{{ include('@Twig/images/icon-minus-square.svg') }}</span>
-                    <span class=\"icon icon-open\">{{ include('@Twig/images/icon-plus-square.svg') }}</span>
-                </a>
-            </th>
-        </tr>
+            <tr>
+                <th colspan=\"2\" class=\"sf-toggle\"
+                    data-toggle-selector=\"#message-item-{{ discr }}-{{ loop.index0 }}-details\"
+                    data-toggle-initial=\"{{ loop.first ? 'display' }}\"
+                >
+                    <span class=\"dump-inline\">{{ profiler_dump(dispatchCall.message.type) }}</span>
+                    {% if showBus %}
+                        <span class=\"label\">{{ dispatchCall.bus }}</span>
+                    {% endif %}
+                    {% if dispatchCall.exception is defined %}
+                        <span class=\"label status-error\">exception</span>
+                    {% endif %}
+                    <a class=\"toggle-button\">
+                        <span class=\"icon icon-close\">{{ include('@Twig/images/icon-minus-square.svg') }}</span>
+                        <span class=\"icon icon-open\">{{ include('@Twig/images/icon-plus-square.svg') }}</span>
+                    </a>
+                </th>
+            </tr>
         </thead>
         <tbody id=\"message-item-{{ discr }}-{{ loop.index0 }}-details\" class=\"sf-toggle-content\">
             <tr>
@@ -723,7 +723,7 @@ class __TwigTemplate_2e392b05651245bb8344c74403d360cb5aaf12d278358850032b37c99da
                             {% set link = caller.file|file_link(caller.line) %}
                             {% if link %}
                                 <a href=\"{{ link }}\" title=\"{{ caller.file }}\">{{ caller.name }}</a>
-                                {% else %}
+                            {% else %}
                                 <abbr title=\"{{ caller.file }}\">{{ caller.name }}</abbr>
                             {% endif %}
                         {% else %}
@@ -740,10 +740,10 @@ class __TwigTemplate_2e392b05651245bb8344c74403d360cb5aaf12d278358850032b37c99da
                 </td>
             </tr>
             {% if showBus %}
-            <tr>
-                <td class=\"text-bold\">Bus</td>
-                <td>{{ dispatchCall.bus }}</td>
-            </tr>
+                <tr>
+                    <td class=\"text-bold\">Bus</td>
+                    <td>{{ dispatchCall.bus }}</td>
+                </tr>
             {% endif %}
             <tr>
                 <td class=\"text-bold\">Message</td>
@@ -760,17 +760,17 @@ class __TwigTemplate_2e392b05651245bb8344c74403d360cb5aaf12d278358850032b37c99da
                 </td>
             </tr>
             {% if dispatchCall.exception is defined %}
-            <tr>
-                <td class=\"text-bold\">Exception</td>
-                <td>
-                    {{ profiler_dump(dispatchCall.exception.value, maxDepth=1) }}
-                </td>
-            </tr>
+                <tr>
+                    <td class=\"text-bold\">Exception</td>
+                    <td>
+                        {{ profiler_dump(dispatchCall.exception.value, maxDepth=1) }}
+                    </td>
+                </tr>
             {% endif %}
         </tbody>
     </table>
     {% endfor %}
 {% endmacro %}
-", "@WebProfiler/Collector/messenger.html.twig", "/home/chesterval/Programmation/hackathon/pass-project/vendor/symfony/web-profiler-bundle/Resources/views/Collector/messenger.html.twig");
+", "@WebProfiler/Collector/messenger.html.twig", "/home/thiery/hackathon/passProject/vendor/symfony/web-profiler-bundle/Resources/views/Collector/messenger.html.twig");
     }
 }
