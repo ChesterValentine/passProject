@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Présentation d'accueil{% endblock %}
+
+{% block stylesheets %}
+{{ parent() }}
+<link rel="stylesheet" type="text/css" href="/css/Entreprises.css">
+{% endblock %}
+
+{% block body %}
+{{ parent() }}
+
+<h3>Liste des accueils possibles : </h3><br />
+        <ul class="mt-3 ml-5">
+            <li class="mb-2"><a href="/visionner/exxon/visiteur">Exxon</a></li>
+            <li class="mb-2"><a href="/visionner/total/visiteur">Total</a></li>
+            <li class="mb-2"><a href="/visionner/renault/visiteur">Renault</a></li>
+        </ul>
+
+
+
+{% endblock %}

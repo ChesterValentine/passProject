@@ -41,6 +41,16 @@ class AppController extends AbstractController
     }
 
     /**
+     * @Route("/entreprises", name="entreprises")
+     */
+    public function entreprises()
+    {
+        return $this->render('app/entreprises.html.twig', [
+            
+        ]);
+    }
+
+    /**
      * @Route("/visionner/{entreprise}/{type}", name="visionner")
      */
     public function visionner()
