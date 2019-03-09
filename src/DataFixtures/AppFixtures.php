@@ -97,6 +97,7 @@ class AppFixtures extends Fixture
             $question = new Question();
             for ($k = 0; $k <10; $k++) {
                 $question->setIntitule($faker->sentence($nbWords = 6, $variableNbWords = true));
+                $question->setIntitule(rtrim( $question->getIntitule(),'.')." ?");
                 $question->setTest($test);
                 $manager->persist($question);
                 $reponse = new Reponse();
