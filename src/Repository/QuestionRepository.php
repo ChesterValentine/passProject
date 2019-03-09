@@ -47,4 +47,16 @@ class QuestionRepository extends ServiceEntityRepository
         ;
     }
     */
+
+    public function FindOneById(int $id)
+    {
+        return $this->createQueryBuilder('q')
+            ->andWhere('q.id = :val')
+            ->setParameter('val', $id)
+            ->getQuery()
+            ->getOneOrNullResult()
+            ;
+    }
+
+
 }
