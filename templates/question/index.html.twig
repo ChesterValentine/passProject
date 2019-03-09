@@ -18,23 +18,13 @@
             <!-- On met les inputs -->
             {% for reponse in question.getReponse() %}
 
-            <input type='radio' name='rdblue' value="Blue"> <label for="Blue">{{ reponse.getIntitule() }}</label><br />
+            <input type='checkbox' name='{{ question.getId() }}' value="{{ reponse.getid() }}"> <label for="Blue">{{ reponse.getIntitule() }}</label><br />
 
             {% endfor %}
 
             <br />
             {% endfor %}
-            <label>Question 2 : Lesquels de ces éléments sont des EPI ?</label>
 
-            <br />
-            <!-- On met les inputs -->
-
-            <input type="checkbox" name='chcked' value="Blue"> <label for="Blue">Chaussures de sécurité</label><br />
-            <input type='checkbox' name='rdblue' value="Blue"> <label for="Red">Lunettes de protection</label><br />
-            <input type='checkbox' name='rdblue' value="Blue"> <label for="Green">Chaussette</label><br />
-
-
-            <br/>
             <input style='background-color: #000000 !important; border-color: #000000 !important;' type='submit' name='submit' class='btn btn-primary pull-right' value='Envoyer'>
 
         </form>
