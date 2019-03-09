@@ -1,0 +1,17 @@
+#saisie{
+    border-radius: 10px; 
+}
+
+#button{
+    background-color: darkgray;
+    border-radius: 10px; 
+    font-size: 20px !important;
+}
+
+h2{
+    text-align: center;
+    font-family: 'Lora', serif;
+    margin: 10%;
+    font-size: 36px !important;
+}
+

@@ -8,12 +8,12 @@ use Symfony\Component\Routing\Annotation\Route;
 class AppController extends AbstractController
 {
     /**
-     * @Route("/app", name="app")
+     * @Route("/visionner/{entreprise}/{type}", name="visionner")
      */
-    public function index()
+    public function visionner()
     {
-        return $this->render('app/index.html.twig', [
-            'controller_name' => 'AppController',
+        return $this->render('app/visionner.html.twig', [
+            
         ]);
     }
 }

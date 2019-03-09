@@ -1,0 +1,41 @@
+img{
+	width: 150px;
+	height: 150px;
+}
+
+table{
+	margin: 100px;
+	text-align: center;
+}
+
+td{
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-top: 50px;
+	padding-bottom: 15px;
+	font-size: 15px;
+	font-family: Calibri;
+}
+
+body{
+  background: #fce0e1; /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #fce0e1 1%, #386172 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #fce0e1 1%,#386172 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #fce0e1 1%,#386172 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fce0e1', endColorstr='#386172',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
+}
+.image-center{
+	background-color: #FEE6E6;
+	padding-left: 46%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+

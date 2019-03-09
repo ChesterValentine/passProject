@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Présentation d'accueil{% endblock %}
+
+{% block body %}
+{{ parent() }}
+<div class="container">
+  <div class="row">
+    <div class="col-11 offset-1 mt-3">
+      <h2>Accueil visiteur société ATY</h2>
+    </div>
+  </div>
+  <div class="row">
+      <div class="col-10 offset-1 mt-5">
+        <div class="embed-responsive embed-responsive-4by3">
+          <iframe class="embed-responsive-item" src="/demo.mp4" allowfullscreen></iframe>
+        </div>
+      </div>
+  </div>
+</div>
+
+
+
+{% endblock %}
