@@ -3,6 +3,7 @@
 `git clone https://github.com/ChesterValentine/passProject.git`
 ```
 composer update
+yarn add bootstrap --dev
 
 php bin/console doctrine:migrations:migrate
 
