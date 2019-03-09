@@ -94,14 +94,15 @@ class AppFixtures extends Fixture
         for ($i = 0; $i < 10; $i++) {
             $test->setNoteMinimumSucces(mt_rand(  10, 12 ));
             $manager->persist($test);
-            $question = new Question();
             for ($k = 0; $k <10; $k++) {
+                $question = new Question();
                 $question->setIntitule($faker->sentence($nbWords = 6, $variableNbWords = true));
                 $question->setIntitule(rtrim( $question->getIntitule(),'.')." ?");
                 $question->setTest($test);
                 $manager->persist($question);
-                $reponse = new Reponse();
+                
                 for ($j = 0; $j < 2; $j++) {
+                    $reponse = new Reponse();
                     $reponse->setIntitule($faker->sentence($nbWords = 6, $variableNbWords = true));
                     $reponse->setBonneReponse($j%2 != 0 ? true : false);
                     $reponse->setQuestion($question);
