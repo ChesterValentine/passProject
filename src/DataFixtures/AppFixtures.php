@@ -103,7 +103,7 @@ class AppFixtures extends Fixture
                 
                 for ($j = 0; $j < 2; $j++) {
                     $reponse = new Reponse();
-                    $reponse->setIntitule($faker->sentence($nbWords = 6, $variableNbWords = true));
+                    $reponse->setIntitule($faker->sentence($nbWords = 4, $variableNbWords = true));
                     $reponse->setBonneReponse($j%2 != 0 ? true : false);
                     $reponse->setQuestion($question);
                     $manager->persist($reponse);
