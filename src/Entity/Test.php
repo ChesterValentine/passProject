@@ -35,13 +35,13 @@ class Test
 
     /**
      * @ORM\OneToOne(targetEntity="App\Entity\AccueilPrestataire", inversedBy="test", cascade={"persist", "remove"})
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\JoinColumn(nullable=true)
      */
     private $contenuPrestataire;
 
     /**
      * @ORM\OneToOne(targetEntity="App\Entity\ContenuVisiteur", inversedBy="test", cascade={"persist", "remove"})
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\JoinColumn(nullable=true)
      */
     private $contenuVisiteur;
 

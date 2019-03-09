@@ -54,3 +54,4 @@
 
 .idea
 composer.bat
+node_modules/*

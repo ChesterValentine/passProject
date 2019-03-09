@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Module{% endblock %}
+
+{% block body %}
+    <style>
+    </style>
+
+    <div class="example-wrapper">
+        <h3 style='margin-top: 1%; text-align: center;'>Questionnaire</h3>
+        <form name='Connexion' action='#' method='POST'>
+
+            <br style='clear:both'>
+            {% for question in questions %}
+            <label>{{ question.getIntitule() }}</label>
+
+            <br />
+            <!-- On met les inputs -->
+            {% for reponse in question.getReponse() %}
+
+            <input type='checkbox' name='{{ question.getId() }}' value="{{ reponse.getid() }}"> <label for="Blue">{{ reponse.getIntitule() }}</label><br />
+
+            {% endfor %}
+
+            <br />
+            {% endfor %}
+
+            <input style='background-color: #000000 !important; border-color: #000000 !important;' type='submit' name='submit' class='btn btn-primary pull-right' value='Envoyer'>
+
+        </form>
+
+    </div>
+{% endblock %}
