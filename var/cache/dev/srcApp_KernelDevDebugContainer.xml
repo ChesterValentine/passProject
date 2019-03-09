@@ -271,6 +271,7 @@
     <parameter key="twig.exception_listener.controller">twig.controller.exception::showAction</parameter>
     <parameter key="twig.form.resources" type="collection">
       <parameter>form_div_layout.html.twig</parameter>
+      <parameter>bootstrap_4_layout.html.twig</parameter>
     </parameter>
     <parameter key="twig.default_path">/home/chesterval/Programmation/hackathon/passProject/templates</parameter>
     <parameter key="web_profiler.debug_toolbar.intercept_redirects">false</parameter>
@@ -398,9 +399,6 @@
       </call>
     </service>
     <service id="App\DataFixtures\AppFixtures" class="App\DataFixtures\AppFixtures" autowire="true" autoconfigure="true">
-      <tag name="doctrine.fixture.orm"/>
-    </service>
-    <service id="App\DataFixtures\Question" class="App\DataFixtures\Question" autowire="true" autoconfigure="true">
       <tag name="doctrine.fixture.orm"/>
     </service>
     <service id="App\Repository\AccueilPrestataireRepository" class="App\Repository\AccueilPrestataireRepository" autowire="true" autoconfigure="true">
@@ -3663,10 +3661,11 @@
         <argument key="default_path">/home/chesterval/Programmation/hackathon/passProject/templates</argument>
         <argument key="debug">true</argument>
         <argument key="strict_variables">true</argument>
-        <argument key="exception_controller">twig.controller.exception::showAction</argument>
         <argument key="form_themes" type="collection">
           <argument>form_div_layout.html.twig</argument>
+          <argument>bootstrap_4_layout.html.twig</argument>
         </argument>
+        <argument key="exception_controller">twig.controller.exception::showAction</argument>
         <argument key="autoescape">name</argument>
         <argument key="cache">/home/chesterval/Programmation/hackathon/passProject/var/cache/dev/twig</argument>
         <argument key="charset">UTF-8</argument>
@@ -4320,10 +4319,6 @@
             <argument key="fixture" type="service" id="App\DataFixtures\AppFixtures"/>
             <argument key="groups" type="collection"/>
           </argument>
-          <argument type="collection">
-            <argument key="fixture" type="service" id="App\DataFixtures\Question"/>
-            <argument key="groups" type="collection"/>
-          </argument>
         </argument>
       </call>
     </service>
@@ -4332,8 +4327,6 @@
     <service id=".abstract.instanceof.App\Controller\AppController" class="App\Controller\AppController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\FixturesBundle\ORMFixtureInterface.0.App\DataFixtures\AppFixtures" class="App\DataFixtures\AppFixtures" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\DataFixtures\AppFixtures" class="App\DataFixtures\AppFixtures" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Doctrine\Bundle\FixturesBundle\ORMFixtureInterface.0.App\DataFixtures\Question" class="App\DataFixtures\Question" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\DataFixtures\Question" class="App\DataFixtures\Question" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\AccueilPrestataireRepository" class="App\Repository\AccueilPrestataireRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\AccueilPrestataireRepository" class="App\Repository\AccueilPrestataireRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\AccueilRepository" class="App\Repository\AccueilRepository" autowire="true" abstract="true"/>
