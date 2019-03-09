@@ -6,6 +6,28 @@
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header mdl-layout__header--waterfall portfolio-header">
+            <div class="mdl-layout__header-row">
+                <!-- LOGO A REDIMENSIONNER DANS LE CSS-->
+                <img height="150px;" width="180px;" src="" alt="Logo">
+            </div>
+
+            <div class="mdl-layout__header-row portfolio-navigation-row" style="height:75px !important;">
+                <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
+                    <a style="color: black;" class="mdl-navigation__link" href="">Item1</a>
+                    <a style="color: black;" class="mdl-navigation__link" href="">Item2</a>
+                    <a style="color: black;" class="mdl-navigation__link" href="">Item3</a>
+                    <a style="color: black;" class="mdl-navigation__link" href="">Item4</a>
+                    <a style="color: black;" class="mdl-navigation__link" href="">Item5</a>
+
+                </nav>
+
+            </div>
+
+        </header>
+
+    </div>
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
     </body>
