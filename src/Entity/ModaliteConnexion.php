@@ -46,6 +46,12 @@ class ModaliteConnexion
      */
     private $testPlateforme;
 
+    /**
+     * @ORM\OneToOne(targetEntity="App\Entity\Entreprise", inversedBy="modaliteConnexion", cascade={"persist", "remove"})
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $entreprise;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -119,6 +125,18 @@ class ModaliteConnexion
     public function setTestPlateforme(?bool $testPlateforme): self
     {
         $this->testPlateforme = $testPlateforme;
+
+        return $this;
+    }
+
+    public function getEntreprise(): ?Entreprise
+    {
+        return $this->entreprise;
+    }
+
+    public function setEntreprise(Entreprise $entreprise): self
+    {
+        $this->entreprise = $entreprise;
 
         return $this;
     }

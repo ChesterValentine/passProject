@@ -28,9 +28,27 @@ class Test
      */
     private $questions;
 
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Accueil", mappedBy="test")
+     */
+    private $accueils;
+
+    /**
+     * @ORM\OneToOne(targetEntity="App\Entity\AccueilPrestataire", inversedBy="test", cascade={"persist", "remove"})
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $contenuPrestataire;
+
+    /**
+     * @ORM\OneToOne(targetEntity="App\Entity\ContenuVisiteur", inversedBy="test", cascade={"persist", "remove"})
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $contenuVisiteur;
+
     public function __construct()
     {
         $this->questions = new ArrayCollection();
+        $this->accueils = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -77,6 +95,61 @@ class Test
                 $question->setTest(null);
             }
         }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Accueil[]
+     */
+    public function getAccueils(): Collection
+    {
+        return $this->accueils;
+    }
+
+    public function addAccueil(Accueil $accueil): self
+    {
+        if (!$this->accueils->contains($accueil)) {
+            $this->accueils[] = $accueil;
+            $accueil->setTest($this);
+        }
+
+        return $this;
+    }
+
+    public function removeAccueil(Accueil $accueil): self
+    {
+        if ($this->accueils->contains($accueil)) {
+            $this->accueils->removeElement($accueil);
+            // set the owning side to null (unless already changed)
+            if ($accueil->getTest() === $this) {
+                $accueil->setTest(null);
+            }
+        }
+
+        return $this;
+    }
+
+    public function getContenuPrestataire(): ?AccueilPrestataire
+    {
+        return $this->contenuPrestataire;
+    }
+
+    public function setContenuPrestataire(AccueilPrestataire $contenuPrestataire): self
+    {
+        $this->contenuPrestataire = $contenuPrestataire;
+
+        return $this;
+    }
+
+    public function getContenuVisiteur(): ?ContenuVisiteur
+    {
+        return $this->contenuVisiteur;
+    }
+
+    public function setContenuVisiteur(?ContenuVisiteur $contenuVisiteur): self
+    {
+        $this->contenuVisiteur = $contenuVisiteur;
 
         return $this;
     }

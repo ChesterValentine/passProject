@@ -24,6 +24,11 @@ class ReponseChoisi
      */
     private $reponse;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Accueil", inversedBy="reponseChoisis")
+     */
+    private $accueil;
+
     
 
     public function __construct()
@@ -65,6 +70,18 @@ class ReponseChoisi
     public function setReponse(?Reponse $reponse): self
     {
         $this->reponse = $reponse;
+
+        return $this;
+    }
+
+    public function getAccueil(): ?Accueil
+    {
+        return $this->accueil;
+    }
+
+    public function setAccueil(?Accueil $accueil): self
+    {
+        $this->accueil = $accueil;
 
         return $this;
     }
