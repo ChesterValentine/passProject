@@ -73,9 +73,20 @@ class Utilisateur
      */
     private $inscrits;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Entreprise", inversedBy="salarie")
+     */
+    private $entreprise;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="App\Entity\Entreprise", inversedBy="visiteur")
+     */
+    private $entrepriseDaccueil;
+
     public function __construct()
     {
         $this->inscrits = new ArrayCollection();
+        $this->entrepriseDaccueil = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -229,6 +240,44 @@ class Utilisateur
             if ($inscrit->getReferent() === $this) {
                 $inscrit->setReferent(null);
             }
+        }
+
+        return $this;
+    }
+
+    public function getEntreprise(): ?Entreprise
+    {
+        return $this->entreprise;
+    }
+
+    public function setEntreprise(?Entreprise $entreprise): self
+    {
+        $this->entreprise = $entreprise;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Entreprise[]
+     */
+    public function getEntrepriseDaccueil(): Collection
+    {
+        return $this->entrepriseDaccueil;
+    }
+
+    public function addEntrepriseDaccueil(Entreprise $entrepriseDaccueil): self
+    {
+        if (!$this->entrepriseDaccueil->contains($entrepriseDaccueil)) {
+            $this->entrepriseDaccueil[] = $entrepriseDaccueil;
+        }
+
+        return $this;
+    }
+
+    public function removeEntrepriseDaccueil(Entreprise $entrepriseDaccueil): self
+    {
+        if ($this->entrepriseDaccueil->contains($entrepriseDaccueil)) {
+            $this->entrepriseDaccueil->removeElement($entrepriseDaccueil);
         }
 
         return $this;
