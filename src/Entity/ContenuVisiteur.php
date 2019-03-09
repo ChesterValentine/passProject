@@ -28,6 +28,16 @@ class ContenuVisiteur
      */
     private $accueil;
 
+    /**
+     * @ORM\OneToOne(targetEntity="App\Entity\Entreprise", mappedBy="contenuVisiteur", cascade={"persist", "remove"})
+     */
+    private $entreprise;
+
+    /**
+     * @ORM\OneToOne(targetEntity="App\Entity\Test", mappedBy="contenuVisiteur", cascade={"persist", "remove"})
+     */
+    private $test;
+
     public function __construct()
     {
         $this->accueil = new ArrayCollection();
@@ -76,6 +86,42 @@ class ContenuVisiteur
             if ($accueil->getContenuVisiteur() === $this) {
                 $accueil->setContenuVisiteur(null);
             }
+        }
+
+        return $this;
+    }
+
+    public function getEntreprise(): ?Entreprise
+    {
+        return $this->entreprise;
+    }
+
+    public function setEntreprise(?Entreprise $entreprise): self
+    {
+        $this->entreprise = $entreprise;
+
+        // set (or unset) the owning side of the relation if necessary
+        $newContenuVisiteur = $entreprise === null ? null : $this;
+        if ($newContenuVisiteur !== $entreprise->getContenuVisiteur()) {
+            $entreprise->setContenuVisiteur($newContenuVisiteur);
+        }
+
+        return $this;
+    }
+
+    public function getTest(): ?Test
+    {
+        return $this->test;
+    }
+
+    public function setTest(?Test $test): self
+    {
+        $this->test = $test;
+
+        // set (or unset) the owning side of the relation if necessary
+        $newContenuVisiteur = $test === null ? null : $this;
+        if ($newContenuVisiteur !== $test->getContenuVisiteur()) {
+            $test->setContenuVisiteur($newContenuVisiteur);
         }
 
         return $this;

@@ -43,9 +43,34 @@ class Accueil
      */
     private $accueilPrestataires;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Entreprise", inversedBy="accueils")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $entreprise;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Utilisateur", inversedBy="accueils")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $utilisateur;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Test", inversedBy="accueils")
+     */
+    private $test;
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\ReponseChoisi", mappedBy="accueil")
+     */
+    private $reponseChoisis;
+
+    
+
     public function __construct()
     {
         $this->accueilPrestataires = new ArrayCollection();
+        $this->reponseChoisis = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -124,6 +149,73 @@ class Accueil
         if ($this->accueilPrestataires->contains($accueilPrestataire)) {
             $this->accueilPrestataires->removeElement($accueilPrestataire);
             $accueilPrestataire->removeAccueil($this);
+        }
+
+        return $this;
+    }
+
+    public function getEntreprise(): ?Entreprise
+    {
+        return $this->entreprise;
+    }
+
+    public function setEntreprise(?Entreprise $entreprise): self
+    {
+        $this->entreprise = $entreprise;
+
+        return $this;
+    }
+
+    public function getUtilisateur(): ?Utilisateur
+    {
+        return $this->utilisateur;
+    }
+
+    public function setUtilisateur(?Utilisateur $utilisateur): self
+    {
+        $this->utilisateur = $utilisateur;
+
+        return $this;
+    }
+
+    public function getTest(): ?Test
+    {
+        return $this->test;
+    }
+
+    public function setTest(?Test $test): self
+    {
+        $this->test = $test;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|ReponseChoisi[]
+     */
+    public function getReponseChoisis(): Collection
+    {
+        return $this->reponseChoisis;
+    }
+
+    public function addReponseChoisi(ReponseChoisi $reponseChoisi): self
+    {
+        if (!$this->reponseChoisis->contains($reponseChoisi)) {
+            $this->reponseChoisis[] = $reponseChoisi;
+            $reponseChoisi->setAccueil($this);
+        }
+
+        return $this;
+    }
+
+    public function removeReponseChoisi(ReponseChoisi $reponseChoisi): self
+    {
+        if ($this->reponseChoisis->contains($reponseChoisi)) {
+            $this->reponseChoisis->removeElement($reponseChoisi);
+            // set the owning side to null (unless already changed)
+            if ($reponseChoisi->getAccueil() === $this) {
+                $reponseChoisi->setAccueil(null);
+            }
         }
 
         return $this;

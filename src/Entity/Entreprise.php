@@ -53,12 +53,33 @@ class Entreprise
      */
     private $entreprisesAutorisantDeclaration;
 
+    /**
+     * @ORM\OneToOne(targetEntity="App\Entity\ModaliteConnexion", mappedBy="entreprise", cascade={"persist", "remove"})
+     */
+    private $modaliteConnexion;
+
+    /**
+     * @ORM\OneToOne(targetEntity="App\Entity\ContenuVisiteur", inversedBy="entreprise", cascade={"persist", "remove"})
+     */
+    private $contenuVisiteur;
+
+    /**
+     * @ORM\OneToOne(targetEntity="App\Entity\AccueilPrestataire", inversedBy="entreprise", cascade={"persist", "remove"})
+     */
+    private $contenuPrestataire;
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Accueil", mappedBy="entreprise", orphanRemoval=true)
+     */
+    private $accueils;
+
     public function __construct()
     {
         $this->salarie = new ArrayCollection();
         $this->visiteur = new ArrayCollection();
         $this->declarant = new ArrayCollection();
         $this->entreprisesAutorisantDeclaration = new ArrayCollection();
+        $this->accueils = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -210,6 +231,78 @@ class Entreprise
         if ($this->entreprisesAutorisantDeclaration->contains($entreprisesAutorisantDeclaration)) {
             $this->entreprisesAutorisantDeclaration->removeElement($entreprisesAutorisantDeclaration);
             $entreprisesAutorisantDeclaration->removeDeclarant($this);
+        }
+
+        return $this;
+    }
+
+    public function getModaliteConnexion(): ?ModaliteConnexion
+    {
+        return $this->modaliteConnexion;
+    }
+
+    public function setModaliteConnexion(ModaliteConnexion $modaliteConnexion): self
+    {
+        $this->modaliteConnexion = $modaliteConnexion;
+
+        // set the owning side of the relation if necessary
+        if ($this !== $modaliteConnexion->getEntreprise()) {
+            $modaliteConnexion->setEntreprise($this);
+        }
+
+        return $this;
+    }
+
+    public function getContenuVisiteur(): ?ContenuVisiteur
+    {
+        return $this->contenuVisiteur;
+    }
+
+    public function setContenuVisiteur(?ContenuVisiteur $contenuVisiteur): self
+    {
+        $this->contenuVisiteur = $contenuVisiteur;
+
+        return $this;
+    }
+
+    public function getContenuPrestataire(): ?AccueilPrestataire
+    {
+        return $this->contenuPrestataire;
+    }
+
+    public function setContenuPrestataire(?AccueilPrestataire $contenuPrestataire): self
+    {
+        $this->contenuPrestataire = $contenuPrestataire;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Accueil[]
+     */
+    public function getAccueils(): Collection
+    {
+        return $this->accueils;
+    }
+
+    public function addAccueil(Accueil $accueil): self
+    {
+        if (!$this->accueils->contains($accueil)) {
+            $this->accueils[] = $accueil;
+            $accueil->setEntreprise($this);
+        }
+
+        return $this;
+    }
+
+    public function removeAccueil(Accueil $accueil): self
+    {
+        if ($this->accueils->contains($accueil)) {
+            $this->accueils->removeElement($accueil);
+            // set the owning side to null (unless already changed)
+            if ($accueil->getEntreprise() === $this) {
+                $accueil->setEntreprise(null);
+            }
         }
 
         return $this;
