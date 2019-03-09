@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Présentation d'accueil{% endblock %}
+
+{% block stylesheets %}
+{{ parent() }}
+<link rel="stylesheet" type="text/css" href="/css/Inscription.css">
+{% endblock %}
+
+{% block body %}
+
+<center>
+        <div class='container'>
+					<div class='col-md-5'>
+						<div class='form-area'>  
+							<form name='Inscription' action='#' method='POST'>
+
+								<br style='clear:both'>
+								
+								<h3 style='margin-bottom: 25px; text-align: center;'>Inscription</h3>
+                                <br />
+                                
+								<!-- On met les inputs -->
+								<div class='form-group'>
+									<input type='text' class='form-control' name='nom' placeholder='Nom' required>
+								</div>
+                                
+                                <div class='form-group'>
+									<input type='text' class='form-control' name='prenom' placeholder='Prénom' required>
+								</div>
+                                
+                                <div class='form-group'>
+									<input type='text' class='form-control' name='mail' placeholder='Adresse mail' required>
+								</div>
+                                
+                                <div class='form-group'>
+									<input type='text' class='form-control' name='login' placeholder='Login' required>
+								</div>
+                                
+								
+								<div class='form-group'>
+									<input type='password' class='form-control' name='mot_de_passe' placeholder='Mot de passe' required>
+								</div>
+                                
+                                <div class='form-group'>
+									<input type='password' class='form-control' name='mot_de_passe' placeholder='Confirmer le mot de passe' required>
+								</div>
+
+                                 <br />
+                                
+								<input style='background-color: #000000 !important; border-color: #000000 !important;' type='submit' name='submit' class='btn btn-primary pull-right' value='Se connecter'>
+							</form>
+						</div>
+					</div>
+				</div>
+            </center>
+
+
+{% endblock %}

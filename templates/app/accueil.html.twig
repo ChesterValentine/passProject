@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Présentation d'accueil{% endblock %}
+
+{% block stylesheets %}
+{{ parent() }}
+<link rel="stylesheet" type="text/css" href="/css/JeSuis.css">
+{% endblock %}
+
+{% block body %}
+
+<h1>Je suis</h1>
+        
+        <div class="containerVisiteur">
+            <label>Visiteur</label><br /><br /><br />
+            <a href="#">Se connecter</a><br /><br />
+            <a href="#">S'inscrire</a><br /><br /><br />
+        </div>
+        
+        <div class="containerIntervenant">
+            <label>Intervenant</label><br /><br /><br />
+            <a href="#">Se connecter</a><br /><br />
+            <a href="#">S'inscrire</a><br /><br /><br />
+        </div>
+        
+        <div class="containerEntreprise">
+            <label>Entreprise</label><br /><br /><br /><br />
+            <a href="#">Se connecter</a><br /><br /><br /><br />
+        </div>
+
+
+
+{% endblock %}

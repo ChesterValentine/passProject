@@ -7,6 +7,37 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class AppController extends AbstractController
 {
+
+    /**
+     * @Route("/", name="accueil")
+     */
+    public function accueil()
+    {
+        return $this->render('app/accueil.html.twig', [
+            
+        ]);
+    }
+
+    /**
+     * @Route("/inscription", name="inscription")
+     */
+    public function inscription()
+    {
+        return $this->render('app/inscription.html.twig', [
+            
+        ]);
+    }
+
+    /**
+     * @Route("/connexion", name="connexion")
+     */
+    public function connexion()
+    {
+        return $this->render('app/connexion.html.twig', [
+            
+        ]);
+    }
+
     /**
      * @Route("/visionner/{entreprise}/{type}", name="visionner")
      */

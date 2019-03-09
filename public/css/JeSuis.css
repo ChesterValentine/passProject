@@ -1,0 +1,60 @@
+h1, .h1{
+    margin: 5%;
+    text-align: center;
+}
+
+.containerVisiteur{
+    width: 15%;
+    display: inline-block;
+    margin-left: 17%;
+    margin-right: 5%;
+    border-width: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    padding-top: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 2%;
+}
+
+.containerEntreprise{
+    width: 15%;
+    display: inline-block;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-width: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    padding-top: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 2%;
+}
+
+.containerIntervenant{
+    width: 15%;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: inline-block;
+    border-width: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    padding-top: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 2%;
+}
+
+a{
+    text-decoration: underline;
+    font-size: 18px;
+    color: black;
+}
+
+label{
+    font-size: 20px;
+    font-weight:bold;
+}
